@@ -10,6 +10,8 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/ytsaurus/cmake/)
 
 add_subdirectory(ytsaurus)
 
+find_package(Python3 3.7 EXACT COMPONENTS Interpreter)
+
 # set(EXTERNAL_LIB_HEADERS ytsaurus)
 
 # add_executable(map_tnode main.cpp)
@@ -51,4 +53,4 @@ target_sources(map_tnode PRIVATE
   ${CMAKE_SOURCE_DIR}/main.cpp
 )
 
-# vcs_info(map_tnode)
+vcs_info(map_tnode)
