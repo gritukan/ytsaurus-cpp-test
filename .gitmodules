@@ -1,0 +1,6 @@
+[submodule "ytsaurus"]
+	path = ytsaurus
+	url = https://github.com/ytsaurus/ytsaurus
+[submodule "yt"]
+	path = ytsaurus
+	url = https://github.com/savnadya/ytsaurus
