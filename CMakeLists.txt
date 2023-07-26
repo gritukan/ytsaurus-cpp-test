@@ -6,11 +6,13 @@ set(CMAKE_CXX_STANDARD 20)
 
 include_directories(${PROJECT_SOURCE_DIR}/ytsaurus)
 
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/ytsaurus/cmake/)
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/ytsaurus/ytsaurus/cmake/)
 
 add_subdirectory(ytsaurus)
 
 find_package(Python3 3.7 EXACT COMPONENTS Interpreter)
+
+add_definitions(-DUSE_SYSTEM_STL)
 
 # set(EXTERNAL_LIB_HEADERS ytsaurus)
 
@@ -28,7 +30,7 @@ target_compile_options(map_tnode PRIVATE
 
 target_link_libraries(map_tnode PUBLIC
  contrib-libs-linux-headers
-  contrib-libs-cxxsupp
+  #contrib-libs-cxxsupp
   yutil
   cpp-malloc-tcmalloc
  libs-tcmalloc-no_percpu_cache
@@ -54,3 +56,4 @@ target_sources(map_tnode PRIVATE
 )
 
 vcs_info(map_tnode)
+
