@@ -1,3 +1,4 @@
-[submodule "ytsaurus"]
+[submodule "YTsaurus"]
 	path = ytsaurus
-	url = https://github.com/ytsaurus/ytsaurus
+	url = https://github.com/YTsaurus/YTsaurus
+	branch = cpp_api_submodule
